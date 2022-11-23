@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Dicoding-C22-056_Capstone_Project</string>
+
+    <string-array name="homepage_name">
+        <item>HOSPITAL</item>
+        <item>News &amp; Hoax</item>
+        <item>Covid-19 Update</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/hospital_button</item>
+        <item>@drawable/ic_news_bro</item>
+        <item>@drawable/ic_virus_amico</item>
+    </integer-array>
 </resources>

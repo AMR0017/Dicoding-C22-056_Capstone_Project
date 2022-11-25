@@ -9,6 +9,7 @@ class CovidHospitalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_covid_hospital)
     }
+    /*test*/
 
     companion object{
         const val P_ID = "id"

@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HospitalPage.provinceList.ProvinceListActivity"
-    android:background="#ECFCFF"
-    android:layout_gravity="center">
+    tools:context=".HospitalPage.City.CityListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_list_province"
+        android:id="@+id/rv_city"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -20,7 +18,7 @@
         tools:listitem="@layout/item_row_province" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

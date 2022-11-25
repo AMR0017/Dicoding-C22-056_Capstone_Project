@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="#9CEBFF"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_item_idProv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#404258"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/tv_item_prov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#0096FF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_idProv"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_idProv"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/tv_item_bed_avaibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#0096FF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_prov"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_prov"
+            android:text="Bed Availability"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

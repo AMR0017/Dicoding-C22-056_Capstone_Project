@@ -4,7 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.CovidHospitalList.CovidHospitalActivity
+import com.example.dicoding_c22_056_capstone_project.HospitalPage.DataHospital
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.HospitalListActivity
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.provinceList.ProvincesItem
 import com.example.dicoding_c22_056_capstone_project.databinding.ItemRowProvinceBinding
@@ -29,9 +29,9 @@ class CityAdapter () : RecyclerView.Adapter<CityAdapter.ViewHolder>() {
             binding.root.setOnClickListener {
                 onItemClickCallback?.onItemClicked(cityResponse)
                 val intent = Intent(itemView.context, HospitalListActivity::class.java)
-                intent.putExtra(CovidHospitalActivity.C_ID, cityResponse.id)
+                intent.putExtra(HospitalListActivity.C_ID, cityResponse.id)
+                DataHospital.cityID = cityResponse.id
                 itemView.context.startActivity(intent)
-                println(cityResponse.id)
             }
         }
     }
@@ -49,6 +49,10 @@ class CityAdapter () : RecyclerView.Adapter<CityAdapter.ViewHolder>() {
 
     interface OnItemClickCallback{
         fun onItemClicked(cityResponse: CitiesItem)
+    }
+
+    companion object{
+        const val P_ID = "id"
     }
 
 }

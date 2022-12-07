@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class CovidHospitalResponse(
 	@field:SerializedName("hospitals")
-	val hospitals: List<HospitalsItem>,
+	val hospitals: ArrayList<HospitalsItem>,
 
 	@field:SerializedName("status")
 	val status: Int

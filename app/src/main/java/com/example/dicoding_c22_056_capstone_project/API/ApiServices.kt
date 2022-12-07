@@ -1,6 +1,7 @@
 package com.example.dicoding_c22_056_capstone_project.API
 
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.City.CityResponse
+import com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.CovidHospitalList.CovidHospitalResponse
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.provinceList.ProvinceResponse
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.provinceList.ProvincesItem
 import retrofit2.Call
@@ -20,13 +21,13 @@ interface ApiServices {
     fun getHospitalCovid(
         @Query("provinceid") provinceid : String,
         @Query("cityid") cityid : String,
-        @Query("type") type : Int = 1
-    )
+        @Query("type") type : String
+    ) : Call<CovidHospitalResponse>
 
     @GET("get-hospitals?")
     fun getHospitalNonCovid(
         @Query("provinceid") provinceid : String,
         @Query("cityid") cityid : String,
         @Query("type") type : Int = 2
-    )
+    ) : Call<CovidHospitalResponse>
 }

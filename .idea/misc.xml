@@ -8,14 +8,16 @@
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2185" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/drawable/item_row_homepagesbutton.xml" value="0.2175" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_city_list.xml" value="0.34479166666666666" />
-        <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_covid_hospital.xml" value="0.16296296296296298" />
+        <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_covid_hospital.xml" value="0.264" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_covid_update.xml" value="0.34479166666666666" />
+        <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_detail_hospital.xml" value="0.16767983789260385" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_hospital_list.xml" value="0.264" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_news.xml" value="0.3307291666666667" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_non_covid_hospital.xml" value="0.11119554204660588" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/activity_province_list.xml" value="0.264" />
-        <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/item_row_covidhospital.xml" value="0.6" />
+        <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/item_row_city.xml" value="0.15625" />
+        <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/item_row_covidhospital.xml" value="0.536" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/item_row_homepages.xml" value="0.2" />
         <entry key="..\:/Dicoding_Capstone/app/src/main/res/layout/item_row_province.xml" value="0.176" />
       </map>

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.DicodingC22056_Capstone_Project"
         tools:targetApi="31">
         <activity
+            android:name=".HospitalPage.HospitalList.DetailHospital.DetailHospitalActivity"
+            android:exported="false" />
+        <activity
             android:name=".HospitalPage.HospitalList.NonCovidHospitalList.NonCovidHospitalActivity"
             android:exported="false" />
         <activity

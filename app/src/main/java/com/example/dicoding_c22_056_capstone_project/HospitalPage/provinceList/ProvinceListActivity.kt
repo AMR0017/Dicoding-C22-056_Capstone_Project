@@ -45,5 +45,4 @@ class ProvinceListActivity : AppCompatActivity() {
     private fun showLoading(loading: Boolean){
         binding.progressBar.visibility = if (loading) View.VISIBLE else View.GONE
     }
-
 }

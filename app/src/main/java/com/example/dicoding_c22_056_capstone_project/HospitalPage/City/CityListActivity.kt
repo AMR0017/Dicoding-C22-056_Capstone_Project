@@ -6,6 +6,9 @@ import android.view.View
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.dicoding_c22_056_capstone_project.HospitalPage.DataHospital
+import com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.HospitalListActivity
+import com.example.dicoding_c22_056_capstone_project.HospitalPage.provinceList.ProvinceListActivity
 import com.example.dicoding_c22_056_capstone_project.R
 import com.example.dicoding_c22_056_capstone_project.databinding.ActivityCityListBinding
 
@@ -32,6 +35,7 @@ class CityListActivity : AppCompatActivity() {
 
         cityViewModel1 = ViewModelProvider(this)[cityViewModel::class.java]
         val provinceId = intent.getStringExtra(P_ID)
+        intent.putExtra(CityListActivity.P_ID, intent.getStringExtra(P_ID))
         with(cityViewModel1){
             if (provinceId != null) {
                 getAdaptCities(provinceId)
@@ -40,6 +44,7 @@ class CityListActivity : AppCompatActivity() {
                     if (it != null){
                         showLoading(false)
                         adapter.setCitiesList(it)
+                        println("provinceID : $provinceId")
                     }
                 }
             }
@@ -53,6 +58,5 @@ class CityListActivity : AppCompatActivity() {
 
     companion object{
         const val P_ID = "id"
-        const val C_ID = "id"
     }
 }

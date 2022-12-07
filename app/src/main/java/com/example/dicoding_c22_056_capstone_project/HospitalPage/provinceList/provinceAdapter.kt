@@ -1,16 +1,18 @@
 package com.example.dicoding_c22_056_capstone_project.HospitalPage.provinceList
 
-import android.app.Activity
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.AdapterView
-import androidx.core.app.ActivityOptionsCompat
-import androidx.recyclerview.widget.ListAdapter
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dicoding_c22_056_capstone_project.HospitalPage.City.CityAdapter
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.City.CityListActivity
+import com.example.dicoding_c22_056_capstone_project.HospitalPage.DataHospital
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.CovidHospitalList.CovidHospitalActivity
+import com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.HospitalListActivity
 import com.example.dicoding_c22_056_capstone_project.databinding.ItemRowProvinceBinding
+
 
 class provinceAdapter () : RecyclerView.Adapter<provinceAdapter.ViewHolder>(){
 
@@ -33,9 +35,9 @@ class provinceAdapter () : RecyclerView.Adapter<provinceAdapter.ViewHolder>(){
                 onItemClickCallback?.onItemClicked(provinceResponse)
                 val intent1 = Intent(itemView.context, CityListActivity::class.java)
                 intent1.putExtra(CityListActivity.P_ID, provinceResponse.id)
-                val intent2 = Intent(itemView.context, CovidHospitalActivity ::class.java)
-                intent2.putExtra(CovidHospitalActivity.P_ID, provinceResponse.id)
+                DataHospital.provID = provinceResponse.id
                 itemView.context.startActivity(intent1)
+                println(provinceResponse.id)
             }
         }
     }

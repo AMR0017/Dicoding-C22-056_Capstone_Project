@@ -18,6 +18,8 @@ class HoaxActivity : AppCompatActivity() {
         binding = ActivityHoaxBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         adapter = NewsAdapter()
         adapter.notifyDataSetChanged()
 

@@ -16,6 +16,8 @@ class NewsPageActivity : AppCompatActivity() {
         binding = ActivityNewsPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         binding.cardNews.setOnClickListener {
             startActivity(Intent(this, NewsActivity::class.java))
         }

@@ -18,6 +18,8 @@ class NewsActivity : AppCompatActivity() {
         binding = ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         adapter = NewsAdapter()
         adapter.notifyDataSetChanged()
 

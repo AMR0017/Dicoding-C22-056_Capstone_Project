@@ -26,7 +26,7 @@ class CovidHospitalActivity : AppCompatActivity() {
         binding = ActivityCovidHospitalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "Hospital List"
+        supportActionBar?.title = "Covid Hospital List"
 
         adapter = CovidHospitalAdapter()
         adapter.notifyDataSetChanged()
@@ -43,31 +43,17 @@ class CovidHospitalActivity : AppCompatActivity() {
         val citiesId = DataHospital.cityID
         val type = "1"
 
-        println(provinceId)
-        println(citiesId)
-        println(type)
-
         with(covidHospitalViewModel1){
-            if (provinceId != null || citiesId != null || type == "1"){
-                if (provinceId != null) {
-                    if (citiesId != null) {
-                        getAdaptCovHospital(provinceId,citiesId,type)
-                    }
-                }
-                showLoading(true)
-                getCovHospital().observe(this@CovidHospitalActivity){
-                    if (it != null){
-                        showLoading(false)
-                        adapter.setHospitalList(it)
-                        println(provinceId)
-                        println(citiesId)
-                        println(type)
-                    }
+            getAdaptCovHospital(provinceId,citiesId,type)
+            showLoading(true)
+            getCovHospital().observe(this@CovidHospitalActivity){
+                if (it != null){
+                    showLoading(false)
+                    adapter.setHospitalList(it)
                 }
             }
         }
     }
-    /*test*/
 
     private fun showLoading(loading:Boolean){
         binding.progressBar3.visibility = if (loading) View.VISIBLE else View.GONE

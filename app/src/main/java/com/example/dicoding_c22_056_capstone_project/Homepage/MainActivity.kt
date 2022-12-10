@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dicoding_c22_056_capstone_project.CovUpdate.CovidUpdateActivity
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.provinceList.ProvinceListActivity
-import com.example.dicoding_c22_056_capstone_project.NewsPage.NewsActivity
-import com.example.dicoding_c22_056_capstone_project.R
+import com.example.dicoding_c22_056_capstone_project.NewsPage.NewsPageActivity
+import com.example.dicoding_c22_056_capstone_project.NewsPage.news.NewsActivity
 import com.example.dicoding_c22_056_capstone_project.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ProvinceListActivity::class.java))
         }
         binding.cardNews.setOnClickListener{
-            startActivity(Intent(this, NewsActivity::class.java))
+            startActivity(Intent(this, NewsPageActivity::class.java))
         }
         binding.cardCovidUpdate.setOnClickListener{
             startActivity(Intent(this, CovidUpdateActivity::class.java))

@@ -4,26 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".HospitalPage.HospitalList.DetailHospital.BedList.CovBedListActivity"
     android:background="#ECFCFF"
-    tools:context=".HospitalPage.City.CityListActivity">
+    android:layout_gravity="center">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_city"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_row_province" />
-
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyle"
+    <TextView
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:textColor="#404258"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Coming Soon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

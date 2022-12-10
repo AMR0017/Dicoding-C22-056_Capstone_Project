@@ -1,4 +1,4 @@
-package com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.CovidHospitalList
+package com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.NonCovidHospitalList
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,10 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.DataHospital
 import com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.DetailHospital.Covid.CovidDetailHospitalActivity
-import com.example.dicoding_c22_056_capstone_project.databinding.ItemRowCovidhospitalBinding
+import com.example.dicoding_c22_056_capstone_project.HospitalPage.HospitalList.DetailHospital.NonCovid.NonCovidDetailHospitalActivity
+import com.example.dicoding_c22_056_capstone_project.databinding.ItemRowNoncovidhospitalBinding
 
-class CovidHospitalAdapter () : RecyclerView.Adapter<CovidHospitalAdapter.ViewHolder>(){
+class NonCovidHospitalAdapter () : RecyclerView.Adapter<NonCovidHospitalAdapter.ViewHolder>() {
     private val hospitalList = ArrayList<HospitalsItem>()
+
     private val onItemClickCallback : OnItemClickCallback? = null
 
     fun setHospitalList(hospitalResponse: ArrayList<HospitalsItem>){
@@ -18,21 +20,17 @@ class CovidHospitalAdapter () : RecyclerView.Adapter<CovidHospitalAdapter.ViewHo
         notifyDataSetChanged()
     }
 
-    inner class ViewHolder(val binding: ItemRowCovidhospitalBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(val binding: ItemRowNoncovidhospitalBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(hospitalResponse: HospitalsItem){
             with(binding){
-                if (hospitalResponse.id != null){
-                    tvItemHospitalName.text = hospitalResponse.name
-                    tvItemHospitalAddress.text = hospitalResponse.address
-                    tvItemBedAvailabilityNumber.text = hospitalResponse.bedAvailability.toString()
-                    tvItemBedUpdate.text = hospitalResponse.info
-                }
+                tvItemHospitalName.text = hospitalResponse.name
+                tvItemHospitalAddress.text = hospitalResponse.address
             }
             binding.root.setOnClickListener {
                 onItemClickCallback?.onItemClicked(hospitalResponse)
-                val intent = Intent(itemView.context, CovidDetailHospitalActivity::class.java)
+                val intent = Intent(itemView.context, NonCovidDetailHospitalActivity::class.java)
                 intent.putExtra(CovidDetailHospitalActivity.HOSPITAL_ID, hospitalResponse.id)
-                DataHospital.covHospitalID = hospitalResponse.id
+                DataHospital.nonCovHospitalID = hospitalResponse.id
                 itemView.context.startActivity(intent)
                 println(hospitalResponse.id)
             }
@@ -40,7 +38,7 @@ class CovidHospitalAdapter () : RecyclerView.Adapter<CovidHospitalAdapter.ViewHo
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = ItemRowCovidhospitalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view = ItemRowNoncovidhospitalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(view)
     }
 

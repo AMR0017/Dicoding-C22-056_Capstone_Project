@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECFCFF"
     android:layout_gravity="center"
+    android:background="#ECFCFF"
     tools:context=".HospitalPage.HospitalList.CovidHospitalList.CovidHospitalActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -29,4 +29,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_hospital_building_rafiki"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#404258"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="There's No Hospital Data In This Area"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

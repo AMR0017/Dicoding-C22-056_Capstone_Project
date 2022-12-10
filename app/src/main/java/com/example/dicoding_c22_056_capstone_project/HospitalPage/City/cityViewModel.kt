@@ -36,7 +36,6 @@ class cityViewModel(application: Application) : AndroidViewModel(application) {
                     _message.value = response.message()
                 }
             }
-
             override fun onFailure(call: Call<CityResponse>, t: Throwable) {
                _isLoading.value = false
                 Log.d("Failure : ", t.message.toString())

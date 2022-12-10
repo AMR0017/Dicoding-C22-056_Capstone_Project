@@ -13,18 +13,17 @@ import com.example.dicoding_c22_056_capstone_project.databinding.ActivityCovidHo
 
 class NonCovidHospitalActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCovidHospitalBinding
-    private lateinit var adapter: CovidHospitalAdapter
-    private lateinit var covidHospitalViewModel1: covidHospitalViewModel
-
+    private lateinit var adapter: NonCovidHospitalAdapter
+    private lateinit var covidHospitalViewModel1: NonCovidHospitalViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCovidHospitalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "Hospital List"
+        supportActionBar?.title = "Non-Covid Hospital List"
 
-        adapter = CovidHospitalAdapter()
+        adapter = NonCovidHospitalAdapter()
         adapter.notifyDataSetChanged()
 
         binding.apply {
@@ -34,7 +33,7 @@ class NonCovidHospitalActivity : AppCompatActivity() {
         }
 
 
-        covidHospitalViewModel1 = ViewModelProvider(this)[covidHospitalViewModel::class.java]
+        covidHospitalViewModel1 = ViewModelProvider(this)[NonCovidHospitalViewModel::class.java]
         val provinceId = DataHospital.provID
         val citiesId = DataHospital.cityID
         val type = "2"
@@ -63,12 +62,15 @@ class NonCovidHospitalActivity : AppCompatActivity() {
             }
         }
     }
-    /*test*/
 
     private fun showLoading(loading:Boolean){
         binding.progressBar3.visibility = if (loading) View.VISIBLE else View.GONE
     }
 
+    private fun noData(data:Boolean){
+        binding.imageView.visibility = if (data) View.VISIBLE else View.GONE
+        binding.textView3.visibility = if (data) View.VISIBLE else View.GONE
+    }
 
     companion object{
         const val P_ID = "provid"

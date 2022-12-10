@@ -2,6 +2,7 @@ package com.example.dicoding_c22_056_capstone_project.CovUpdate
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.dicoding_c22_056_capstone_project.R
 import com.example.dicoding_c22_056_capstone_project.databinding.ActivityCovidUpdateBinding
@@ -18,8 +19,10 @@ class CovidUpdateActivity : AppCompatActivity() {
 
         updateViewModel = ViewModelProvider(this)[UpdateViewModel::class.java]
         updateViewModel.getCovidUpdate()
+        showLoading(true)
         updateViewModel.updateCovid.observe(this){
                 update ->
+            showLoading(false)
             binding.apply {
                 tvPositive.text = update.positif.toString()
                 tvRecover.text = update.sembuh.toString()
@@ -28,6 +31,13 @@ class CovidUpdateActivity : AppCompatActivity() {
                 println("Positif: ${update.positif}")
             }
         }
+        updateViewModel.isLoading.observe(this){
+            showLoading(it)
+        }
+    }
+
+    private fun showLoading(loading:Boolean){
+        binding.progressBar6.visibility = if (loading) View.VISIBLE else View.GONE
     }
 
 }

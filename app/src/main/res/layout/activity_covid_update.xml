@@ -74,8 +74,8 @@
 
         <TextView
             android:id="@+id/tvRecover"
-            android:layout_width="206dp"
-            android:layout_height="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:textSize="24sp"
@@ -107,8 +107,8 @@
 
         <TextView
             android:id="@+id/tvHospitalized"
-            android:layout_width="206dp"
-            android:layout_height="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:textSize="24sp"
@@ -139,8 +139,8 @@
 
         <TextView
             android:id="@+id/tvDeath"
-            android:layout_width="206dp"
-            android:layout_height="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:textSize="24sp"
@@ -148,6 +148,17 @@
             tools:text="TextView" />
 
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar6"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
